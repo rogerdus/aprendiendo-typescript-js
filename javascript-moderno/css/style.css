@@ -1,0 +1,13 @@
+body{
+    background-color: beige;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.ficha{
+    border: 2px solid black; 
+    background: white;
+    margin: 15px auto;
+    padding: 15px;
+    width: 250px;
+}
