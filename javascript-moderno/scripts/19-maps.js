@@ -15,6 +15,8 @@ const antiguos_gadgets = {
       .set("cinco","PC")
       .set("seis","PC")
   
+
+  /// obtener los elementos por id
   console.log(gadgets.get("cinco"))
   
   /// comprobar si existen elementos
