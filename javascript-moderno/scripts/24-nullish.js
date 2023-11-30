@@ -12,8 +12,8 @@ function multiplicacion (numero1, numero2 ){
 }
 
 function mostrarUsuario(id,nombre){
-    let mi_usaurio = (id+" "+nombre);
-    
+    let id = id ?? 0;
+    nombre = nombre ?? "Sin nombre";
     return mi_usaurio;
 }
 
