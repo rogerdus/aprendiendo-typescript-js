@@ -1,4 +1,4 @@
-class Coche {
+abstract class Coche {
     //// FORMA ANTERIOR
     // modelo: string;
     // marca: string;
@@ -22,14 +22,18 @@ class Coche {
     //private: accesible solo desde la clase
     //protected: accesible desde la clase y las clases hijas
 
+    public prueba: string;
+
     constructor(
         public modelo: string,
         public marca: string,
         protected color: string,
         public year: number,
-        private arrancado:boolean = false,
-        private velocidad:number = 0,
-    ){}
+        protected arrancado:boolean = false,
+        protected velocidad:number = 0,
+    ){
+        this.prueba = "prueba";
+    }
 
     public arrancar():void{
         this.arrancado = true;
@@ -72,9 +76,43 @@ class Coche {
 
 }
 
+class Camioneta extends Coche{
+    constructor(
+        public modelo: string,
+        public marca: string,
+        protected color: string,
+        public year: number,
+    ){
+        /// con super se accede a los valores de la clase Coche
+        super(marca,modelo,year,color);
+    }
+
+    public arrancar():void {
+        console.log("clase hija");
+        this.velocidad = 200;
+        this.arrancado = true;
+        console.log(this);
+    }
+
+    public mostrar(){
+        /// asi se accede a un metodo dentro de una clase hija
+        //this.arrancar();
+        /// asi se accede a un metodo heredado
+        super.arrancar
+        return this.arrancado;
+    }
+}
+
+let micamioneta = new Camioneta("Jeep","Nose",1990,"negro");
+console.log(micamioneta);
+
+console.log(micamioneta.mostrar());
+
+/*
 let mi_coche:Coche = new Coche("Renault","Clio","Rojo",2020);
 console.log(mi_coche.marca+mi_coche.modelo);
 mi_coche.darColor = "Azul";
 console.log(mi_coche.getColor);
 
 console.log(Coche.saludar());
+*/

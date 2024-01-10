@@ -1,24 +1,5 @@
 "use strict";
 class Coche {
-    //// FORMA ANTERIOR
-    // modelo: string;
-    // marca: string;
-    // color: string;
-    // year: number;
-    // arrancado:boolean;
-    // velocidad:number;
-    // constructor(modelo:string,marca:string,color:string,year:number){
-    //     this.modelo = modelo;
-    //     this.marca = marca;
-    //     this.color = color;
-    //     this.year = year;
-    //     this.arrancado = false;
-    //     this.velocidad = 0;
-    // }
-    /// FORMA NUEVA
-    //public: accesible desde cualquier lugar
-    //private: accesible solo desde la clase
-    //protected: accesible desde la clase y las clases hijas
     constructor(modelo, marca, color, year, arrancado = false, velocidad = 0) {
         this.modelo = modelo;
         this.marca = marca;
@@ -26,6 +7,7 @@ class Coche {
         this.year = year;
         this.arrancado = arrancado;
         this.velocidad = velocidad;
+        this.prueba = "prueba";
     }
     arrancar() {
         this.arrancado = true;
@@ -57,8 +39,37 @@ class Coche {
         return "Hola Mundo";
     }
 }
-let mi_coche = new Coche("Renault", "Clio", "Rojo", 2020);
-console.log(mi_coche.marca + mi_coche.modelo);
+class Camioneta extends Coche {
+    constructor(modelo, marca, color, year) {
+        /// con super se accede a los valores de la clase Coche
+        super(marca, modelo, year, color);
+        this.modelo = modelo;
+        this.marca = marca;
+        this.color = color;
+        this.year = year;
+    }
+    arrancar() {
+        console.log("clase hija");
+        this.velocidad = 200;
+        this.arrancado = true;
+        console.log(this);
+    }
+    mostrar() {
+        /// asi se accede a un metodo dentro de una clase hija
+        //this.arrancar();
+        /// asi se accede a un metodo heredado
+        super.arrancar;
+        return this.arrancado;
+    }
+}
+let micamioneta = new Camioneta("Jeep", "Nose", 1990, "negro");
+console.log(micamioneta);
+console.log(micamioneta.mostrar());
+/*
+let mi_coche:Coche = new Coche("Renault","Clio","Rojo",2020);
+console.log(mi_coche.marca+mi_coche.modelo);
 mi_coche.darColor = "Azul";
 console.log(mi_coche.getColor);
+
 console.log(Coche.saludar());
+*/ 
