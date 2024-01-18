@@ -90,9 +90,6 @@ class Quad extends Coche{
 let mi_quad = new Quad("Susuki","A1","Verde",120,2020,4);
 mi_quad.subirVelocidad();
 mi_quad.subirVelocidad();
-mi_quad.subirVelocidad();
-mi_quad.subirVelocidad();
-mi_quad.subirVelocidad();
 
 mi_quad.guardarMarca = "Peugeot";
 
