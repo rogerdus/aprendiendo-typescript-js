@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+    <script type="text/javascript" src="main.js" defer></script>
+    <style>
+        li{
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        li[data-continente = "Europa"]{
+            background-color: blue;
+            color: azure;
+        }
+
+        li[data-continente = "America"]{
+            background-color: green;
+            color: azure;
+        }
+
+        li[data-continente = "Asia"]{
+            background-color: red;
+            color: azure;
+        }
+
+        li[data-continente = "Oceania"]{
+            background-color:yellow;
+            color-text: black;
+        }
+        
+    </style>
+</head>
+<body>
+  <h1>Atributos DATA</h1>
+  <ul id="lista">
+    <li data-continente="Europa">España</li>
+    <li data-continente="America">Mexico</li>
+    <li data-continente="America">EUA</li>
+    <li data-continente="Europa">Alemania</li>
+    <li data-continente="Asia">China</li>
+    <li data-continente="Oceania">Australia</li>
+  </ul>
+</body>
+</html>
