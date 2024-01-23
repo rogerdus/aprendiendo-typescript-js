@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/main.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- Cabecera -->
+      <header class="header">
+        <div class="logo">
+          <div class="play"></div>
+        </div>
+        <h1>Mis Pelis</h1>
+      </header>
+      <!-- Barra de navegacion -->
+      <nav class="nav">
+        <ul>
+          <li><a href="">Inicio</a></li>
+          <li><a href="">Peliculas</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Contenido principal -->
+      <section class="content">
+        <!-- aqui van las peliculas -->
+        <article class="peli-item">
+          <h3 class="title">Desarrollo Web</h3>
+          <p class="description">pruebas.mx</p>
+          <button class="edit">Editar</button>
+          <button class="delete">Borrar</button>
+        </article>
+        <article class="peli-item">
+          <h3 class="title">Desarrollo Web</h3>
+          <p class="description">pruebas.mx</p>
+          <button class="edit">Editar</button>
+          <button class="delete">Borrar</button>
+        </article>
+        <article class="peli-item">
+          <h3 class="title">Desarrollo Web</h3>
+          <p class="description">pruebas.mx</p>
+          <button class="edit">Editar</button>
+          <button class="delete">Borrar</button>
+        </article>
+        <article class="peli-item">
+          <h3 class="title">Desarrollo Web</h3>
+          <p class="description">pruebas.mx</p>
+          <button class="edit">Editar</button>
+          <button class="delete">Borrar</button>
+        </article>
+      </section>
+      <!-- Barra lateral -->
+      <aside class="lateral">
+        <div class="search">
+          <h3 class="title">Buscador</h3>
+          <form action="">
+            <input type="text" />
+            <button>Buscar</button>
+          </form>
+        </div>
+        <div class="add">
+          <h3 class="titlw">Añadir pelicula</h3>
+          <form action="">
+            <input type="text" id="title" placeholder="Titulo" />
+            <textarea id="description" placeholder="Descripcion"></textarea>
+            <input type="submit" id="save" value="Guardar" />
+          </form>
+          Pie de pagina
+        </div>
+      </aside>
+    </div>
+    <!-- Pie de pagina -->
+    <footer class="footer">
+      &copy; Master en Javascript ES12 y Typescript> <a href=""></a>
+    </footer>
+  </body>
+</html>
