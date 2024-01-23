@@ -161,7 +161,11 @@ input[type="button"]
 
 .lateral input[type="text"],
 .lateral input[type="text"],
-.lateral textarea {
+.lateral textarea
+.edit-form input[type="text"],
+.edit-form input[type="text"],
+.edit-form textarea 
+{
     display: block;
     margin: 0 auto;
     margin-top: 15px;
@@ -175,10 +179,17 @@ input[type="button"]
     border-color: transparent;
 }
 
+.edit-form{
+    border-top: 1px solid #ddd;
+    margin-top: 2px;
+    box-shadow: 0px 0px 4px #ddd;
+}
+
 .footer a {
     color: #0b468a;
     text-decoration: none;    
 }
+
 
 @media(max-width: 1085px){
     .content{

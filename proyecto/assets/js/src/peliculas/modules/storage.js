@@ -11,8 +11,8 @@ export default class Storage{
             pelis = [
                 {
                     id: 0,
-                    title: '',
-                    description: ''
+                    title: 'prueba',
+                    description: 'prueba'
                 }
             ];
 

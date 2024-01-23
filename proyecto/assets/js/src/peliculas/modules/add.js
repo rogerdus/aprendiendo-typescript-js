@@ -1,10 +1,12 @@
 import Storage from "./storage.js";
+import List from "./list.js";
 
 export default class Add {
 
     constructor() {
         ///Crear objetos
         this.storage = new Storage();
+        this.list = new List();
 
         /// Conseguir elementos del dom a utilizar
         this.title_field = document.querySelector('#title');
@@ -41,6 +43,8 @@ export default class Add {
                 this.storage.save(pelis);
                 
                 //Actualizar el listado de peliculas
+                this.list.show(pelis);
+
             } else {
                 alert("Introduce bien los datos en el formulario");
             }
